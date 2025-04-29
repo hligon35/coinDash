@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://2wx2vo6gmth5"]
+
+[ext_resource type="FontFile" uid="uid://c3ylc0cv4e2ll" path="res://assets/Kenney Bold.ttf" id="1_37p78"]
+[ext_resource type="Script" uid="uid://d24p606fwnjua" path="res://hud.gd" id="1_64ctp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_640wx"]
+font = ExtResource("1_37p78")
+font_size = 52
+outline_size = 5
+outline_color = Color(1, 0.705882, 0.0784314, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_64ctp"]
+font = ExtResource("1_37p78")
+font_size = 35
+font_color = Color(1, 1, 1, 0.686275)
+outline_size = 2
+outline_color = Color(1, 0.705882, 0.0784314, 0.686275)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.686275)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8sq4i"]
+font = ExtResource("1_37p78")
+font_size = 20
+font_color = Color(1, 0.705882, 0.0784314, 0.686275)
+outline_size = 2
+outline_color = Color(1, 1, 1, 0.686275)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.686275)
+shadow_offset = Vector2(2, 2)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_64ctp")
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Coin Dash"
+label_settings = SubResource("LabelSettings_640wx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Score" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_64ctp")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_64ctp")
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Level: 1"
+label_settings = SubResource("LabelSettings_8sq4i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -32.0
+offset_right = 44.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 48
+text = "Start"
+
+[connection signal="timeout" from="Timer" to="." method="onTimerTimeout"]
+[connection signal="pressed" from="StartButton" to="." method="onStartButtonPressed"]
