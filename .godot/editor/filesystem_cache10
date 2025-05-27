@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1748359694
+::res://::1748361683
 cactus.gd::GDScript/GDScript::4368460473243843233::1742601897::0::1::::<>Area2D<><>0<>0<><>::
 cactus.tscn::PackedScene::7315962432143784376::1748352715::0::1::::<><><>0<>0<><>::uid://7r3rpoj2fgyv::::res://assets/cactus.png<>uid://b3id52b1a846h::::res://cactus.gd
 coin.gd::GDScript/GDScript::746308812529344268::1742601652::0::1::::<>Area2D<><>0<>0<><>::
@@ -8,16 +8,13 @@ export_presets.cfg::TextFile::-1::1748359694::0::1::::<><><>0<>0<><>::
 hud.gd::GDScript/GDScript::9115195259906248820::1746056128::0::1::::<>CanvasLayer<><>0<>0<><>::
 hud.tscn::PackedScene::1941960922119875192::1748352714::0::1::::<><><>0<>0<><>::uid://c3ylc0cv4e2ll::::res://assets/Kenney Bold.ttf<>uid://d24p606fwnjua::::res://hud.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::5449445570379923831::1742489798::1742489822::1::::<><><>0<>0<>59b86b674fdbb2beb425d81099de6f33<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-index.apple-touch-icon.png::CompressedTexture2D::3281066376459625061::1748359694::1748359698::1::::<><><>0<>0<>df282f98f22ff33363f3d12906bdb462<>res://.godot/imported/index.apple-touch-icon.png-8085a11cc297d91deb55511843765958.ctex::
-index.icon.png::CompressedTexture2D::8671479990146407488::1748359694::1748359698::1::::<><><>0<>0<>86704ea1defdd1e2e7858005f87d274b<>res://.godot/imported/index.icon.png-5665fad188e88d1e882500a4376bfe02.ctex::
-index.png::CompressedTexture2D::3070181812975949560::1748359694::1748359699::1::::<><><>0<>0<>08b12ed408ddd41dc70fc90fcabc8e75<>res://.godot/imported/index.png-5122033cac747157decad52589e2295c.ctex::
-main.gd::GDScript::388294761459089750::1746073984::0::1::::<>Node<><>0<>0<><>::
+main.gd::GDScript/GDScript::388294761459089750::1746073984::0::1::::<>Node<><>0<>0<><>::
 main.tscn::PackedScene::4986556853407595641::1748352714::0::1::::<><><>0<>0<><>::uid://c60akjrr0sjmb::::res://assets/grass.png<>uid://fsdfmvwup72i::::res://main.gd<>uid://cg2qbmuol5qi0::::res://coin.tscn<>uid://dqfsc4adh0wpl::::res://player.tscn<>uid://c2868wpgec0sn::::res://powerup.tscn<>uid://dch53kh66pr01::::res://cactus.tscn<>uid://2wx2vo6gmth5::::res://hud.tscn<>uid://buyvo0ops0gty::::res://assets/audio/Coin.wav<>uid://bfula5sasqfxs::::res://assets/audio/Level.wav<>uid://chfhb12qolub7::::res://assets/audio/EndSound.wav<>uid://djkfl7odawf7i::::res://assets/audio/Powerup.wav
 player.gd::GDScript/GDScript::3938914866636144895::1742603045::0::1::::<>Area2D<><>0<>0<><>::
 player.tscn::PackedScene::8293703438839549689::1748352714::0::1::::<><><>0<>0<><>::uid://b25pttkb6acxh::::res://assets/player/hurt/player-hurt-1.png<>uid://bwebl8lt3hcvv::::res://player.gd<>uid://btg4vjcejsfys::::res://assets/player/hurt/player-hurt-2.png<>uid://4s6fnrdbm4ds::::res://assets/player/idle/player-idle-4.png<>uid://wd8r26yhn80i::::res://assets/player/idle/player-idle-3.png<>uid://drst8fkloiva8::::res://assets/player/idle/player-idle-2.png<>uid://4y8kqluufh7m::::res://assets/player/idle/player-idle-1.png<>uid://3h4icbybsvmm::::res://assets/player/run/player-run-6.png<>uid://dvnkpca8hxoyk::::res://assets/player/run/player-run-5.png<>uid://dk4amjssuouqu::::res://assets/player/run/player-run-4.png<>uid://cpdlnwy1kpkv::::res://assets/player/run/player-run-3.png<>uid://dsqo8nq03o4bw::::res://assets/player/run/player-run-2.png<>uid://du00uuparqiac::::res://assets/player/run/player-run-1.png
 powerup.gd::GDScript/GDScript::7529134581860101027::1742607239::0::1::::<>Area2D<><>0<>0<><>::
 powerup.tscn::PackedScene::6738006948435506469::1748352715::0::1::::<><><>0<>0<><>::uid://dfjf0naefq83x::::res://powerup.gd<>uid://dcw1kpqt55410::::res://assets/pow/pow-frame-10.png<>uid://cpx5c4rkwrvbk::::res://assets/pow/pow-frame-9.png<>uid://21ccs1m81654::::res://assets/pow/pow-frame-8.png<>uid://cyurcxckciat4::::res://assets/pow/pow-frame-7.png<>uid://qa8u7f30ophm::::res://assets/pow/pow-frame-4.png<>uid://b2kmghg5krku5::::res://assets/pow/pow-frame-6.png<>uid://pcldyv7whq0d::::res://assets/pow/pow-frame-5.png<>uid://lsc6s2ntfred::::res://assets/pow/pow-frame-2.png<>uid://7udln2s1ildb::::res://assets/pow/pow-frame-3.png<>uid://b3vm3no4wyu5g::::res://assets/pow/pow-frame-1.png
-README.md::TextFile::-1::1748352858::0::1::::<><><>0<>0<><>::
+README.md::TextFile/TextFile::-1::1748352858::0::1::::<><><>0<>0<><>::
 ::res://assets/::1742489902
 cactus.png::CompressedTexture2D/CompressedTexture2D::2282868662452614869::1742336027::1742489855::1::::<><><>0<>0<>f63622082fff902f895f4fb967dcb245<>res://.godot/imported/cactus.png-366c3b67d0b3dfc72dbc4a57fb23b7b9.ctex::
 grass.png::CompressedTexture2D/CompressedTexture2D::7000323321734104637::1742336027::1742489855::1::::<><><>0<>0<>d468ed7097c1a4cbc6a8e0a4df8bdf7e<>res://.godot/imported/grass.png-a207bda4a53e32c7645a41ec6d1c234e.ctex::
