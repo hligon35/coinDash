@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://da37rsntkyrk4"]
-
-[ext_resource type="Script" path="res://touch_controls.gd" id="1_u78e5"]
-
-[node name="TouchControls" type="CanvasLayer"]
-layer = 10
-script = ExtResource("1_u78e5")
