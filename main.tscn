@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdbr4loxr3p4t"]
+[gd_scene load_steps=14 format=3 uid="uid://cdbr4loxr3p4t"]
 
 [ext_resource type="Texture2D" uid="uid://c60akjrr0sjmb" path="res://assets/grass.png" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://fsdfmvwup72i" path="res://main.gd" id="1_h2yge"]
@@ -11,6 +11,8 @@
 [ext_resource type="AudioStream" uid="uid://bfula5sasqfxs" path="res://assets/audio/Level.wav" id="7_kek77"]
 [ext_resource type="AudioStream" uid="uid://chfhb12qolub7" path="res://assets/audio/EndSound.wav" id="8_4c57u"]
 [ext_resource type="AudioStream" uid="uid://djkfl7odawf7i" path="res://assets/audio/Powerup.wav" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://da37rsntkyrk4" path="res://touch_controls.tscn" id="12_dhs32"]
+[ext_resource type="Script" path="res://touch_instructions.gd" id="13_x0j5a"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_h2yge")
@@ -48,8 +50,27 @@ one_shot = true
 [node name="PowerupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_kek77")
 
+[node name="TouchControls" parent="." instance=ExtResource("12_dhs32")]
+
+[node name="TouchInstructions" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 100.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 16
+text = "Touch & drag anywhere to move
+Or tap where you want to go"
+horizontal_alignment = 1
+script = ExtResource("13_x0j5a")
+
 [connection signal="hurt" from="Player" to="." method="onPlayerHurt"]
 [connection signal="pickup" from="Player" to="." method="onPlayerPickup"]
 [connection signal="timeout" from="GameTimer" to="." method="onGameTimerTimeout"]
 [connection signal="startGame" from="HUD" to="." method="onHudStartGame"]
 [connection signal="timeout" from="PowerupTimer" to="." method="onPowerupTimerTimeout"]
+[connection signal="joystick_input" from="TouchControls" to="Player" method="set_joystick_input"]

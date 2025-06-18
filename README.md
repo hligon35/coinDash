@@ -6,8 +6,12 @@ Coin Dash is a fast-paced arcade game where the objective is to collect as many 
 
 ## How to Play
 
-1.  **Start the Game**: Click the "Start Game" button on the main screen or when the game is over.
-2.  **Control the Player**: Use the arrow keys (or configured input) to move your character around the screen.
+1.  **Start the Game**: Click or tap the "Start Game" button on the main screen or when the game is over.
+2.  **Control the Player**: 
+    - On desktop: Use the arrow keys (or configured input) to move your character around the screen.
+    - On touch devices: There are two ways to control the player:
+        - **Touch Joystick**: Touch and drag anywhere on the screen to create a virtual joystick that controls the character's movement.
+        - **Direct Touch**: Tap anywhere on the screen and the character will move toward that position.
 3.  **Collect Coins**: Move your character over the spinning coins to collect them. Each coin increases your score.
 4.  **Grab Power-ups**: Occasionally, a power-up will appear. Collect it to gain benefits like extra points and bonus time.
 5.  **Avoid Cacti**: Cacti will appear on the screen. Touching a cactus will end the game.

@@ -6,9 +6,48 @@ signal hurt
 @export var speed = 350
 var velocity = Vector2.ZERO
 var screenSize = Vector2(480, 720)
+var touchPos = Vector2.ZERO
+var isTouching = false
+var joystickInput = Vector2.ZERO
+
+func _ready():
+	# Make sure input is processed
+	set_process_input(true)
+
+func _input(event):
+	# Handle direct touch input for simpler touch control
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			touchPos = event.position
+			isTouching = true
+		else:
+			isTouching = false
+			velocity = Vector2.ZERO
+	
+	# Handle touch drag (moving finger)
+	elif event is InputEventScreenDrag:
+		touchPos = event.position
+
+# Called by the touch control joystick
+func set_joystick_input(direction):
+	joystickInput = direction
 
 func _process(delta):
-	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	# Handle keyboard input
+	var keyboardInput = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	
+	# Priority: joystick input > direct touch > keyboard
+	if joystickInput != Vector2.ZERO:
+		velocity = joystickInput
+	elif isTouching:
+		# If using direct touch, calculate movement direction based on player position and touch position
+		var direction = (touchPos - position).normalized()
+		velocity = direction
+	else:
+		# Otherwise use keyboard input
+		velocity = keyboardInput
+	
+	# Move the player
 	position += velocity * speed * delta
 
 	# Clamp position to stay within screen boundaries
